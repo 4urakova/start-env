@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url("variables.scss");
+@import url("../../public/vendor/normalize-css/normalize.css");
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* SASS vars */
+$color1: #F00;
+$bgColor: #E9DC51;
+
+:root {
+  /* CSS next vars */
+  --color2: #0F0;
+}
+
+
+/* easy media */
+body{
+  h1{
+    color: #00AA00;
+
+    @media (width >= 100px) and (width <= 2000px){
+      color: $color1;
+      color: var(--color2);
+    }
+  }
+}
+
+
+/* Lost grid */
+.column__wrap{
+  //lost-utility: clearfix;
+  lost-center: 1140px 10px flex;
+  background-color: color($bgColor lightness(+25%));
+
+  .column{
+    lost-waffle: 1/3;
+    //lost-column: 1/3 3 10px;
+    //lost-column: 1/7 flex;
+    border: 1px solid #000;
+    min-height: 100px;
+    background-color: $bgColor;
+  }
+}
+
+.icon-ipad{
+  display: inline-block;
+
+  /* short size */
+  size: 24px 24px;
+  background-image: url("../img/ipad.svg");
+
+  &&_red{
+    background-image: svg("ipad", "[stroke]: #F00");
+  }
+  &&_green{
+    background-image: svg("ipad", "[stroke]: #0F0");
+
+    /* paste animate.css animation */
+    animation: bounce 2s infinite;
+  }
+  &&_blue{
+    background-image: svg("ipad", "[stroke]: #00F");
+  }
+}
+
+:fullscreen{
+  body{
+    color: #CCC;
+  }
+}

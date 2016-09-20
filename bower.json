@@ -1,0 +1,20 @@
+{
+  "name": "html-start-env",
+  "version": "1.0.0",
+  "authors": [
+    "Sergey Glazkov <sg@4xxi.com>"
+  ],
+  "main": [
+    "./public/**/*.*"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "node_modules",
+    "public/vendor"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "requirejs": "https://github.com/jrburke/requirejs-bower.git#~2.1.22",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

@@ -1,0 +1,12 @@
+.idea
+*.iml
+*~
+.DS_Store
+*.diff
+*.patch
+.project
+.settings
+
+
+node_modules
+public
